@@ -1,0 +1,202 @@
+/* colores 
+naranja : #FFA500
+azul : #00008B  */
+
+/* --- Variables de Color y Estilos Generales --- */
+:root {
+    --primary-color: #0056b3; /* Azul oscuro */
+    --secondary-color: #ff9900; /* Naranja vibrante */
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --white-color: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* --- Barra de Navegación --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navlogo a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navlinks {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navlinks li {
+    margin-left: 20px;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navlinks a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Banner Principal --- */
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/7303027/pexels-photo-7303027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-content {
+    max-width: 600px;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    color: var(--white-color);
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e68a00;
+}
+
+/* --- Sección de Servicios --- */
+.services-section {
+    background-color: var(--bg-color);
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* --- Sección Sobre Nosotros --- */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.about-content, .about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* --- Pie de Página --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media a {
+    color: var(--white-color);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Diseño Responsivo para Móviles --- */
+@media (max-width: 768px) {
+    .navlinks {
+        display: none; /* Simplificado para el ejemplo, idealmente sería un menú hamburguesa */
+    }
+    
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
